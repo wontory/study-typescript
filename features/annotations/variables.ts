@@ -50,6 +50,16 @@ for (let i = 0; i < words.length; i++) {
   }
 }
 
+// When to use annotations 2번 예시
+let numbers = [-10, -1, 12];
+let numberAboveZero: boolean | number = false; // boolean 타입인지 number 타입인지 예측할 수 없을 때
+
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] > 0) {
+    numberAboveZero = numbers[i];
+  }
+}
+
 // JSON.parse()는 다양한 타입을 반환할 수 있기 때문에 타입 추론이 일어나지 않는다.
 // 따라서 coordinates의 타입은 any가 된다.
 const json = '{"x": 10, "y": 20}';
