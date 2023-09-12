@@ -40,6 +40,16 @@ const logNumber: (i: number) => void = (i: number) => {
 //* 2) 추론이 불가능한 타입을 사용할 때
 //* 3) 함수가 any 타입을 반환하는데, 그 값을 명확히 하고 싶을 때
 
+// When to use annotations 1번 예시
+let words = ['red', 'green', 'blue'];
+let foundWord: boolean;
+// Best way: let foundWord = false;
+for (let i = 0; i < words.length; i++) {
+  if (words[i] === 'green') {
+    foundWord = true;
+  }
+}
+
 // JSON.parse()는 다양한 타입을 반환할 수 있기 때문에 타입 추론이 일어나지 않는다.
 // 따라서 coordinates의 타입은 any가 된다.
 const json = '{"x": 10, "y": 20}';
