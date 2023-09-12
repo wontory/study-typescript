@@ -44,4 +44,6 @@ const logNumber: (i: number) => void = (i: number) => {
 // 따라서 coordinates의 타입은 any가 된다.
 const json = '{"x": 10, "y": 20}';
 const coordinates = JSON.parse(json);
+// When to use annotations 3번 예시
+// const coordinates: {x: number; y: number} = JSON.parse(json);
 console.log(coordinates); // {x: 10, y: 20}: any
